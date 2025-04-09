@@ -54,8 +54,6 @@ next-env.d.ts
 ehthumbs.db
 Thumbs.db
 
-# carpeta pública  
-/public  
 
 # bolt
 /.bolt
