@@ -3,7 +3,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import ParticlesBackground from "@/components/ParticlesBackground";
-import Navbar from "@/components/Navbar";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -12,7 +11,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen relative">
-      <Navbar />
       <ParticlesBackground />
       
       <div className="container mx-auto px-4 pt-32 pb-16">
@@ -35,10 +33,10 @@ export default function Home() {
           <h1 className="gradient-text mb-6">
             Desarrolladora full stack
           </h1>
-          <h2 className="text-2xl md:text-3xl text-gray-300 mb-8">
+          <h2 className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-8">
           Hola Aqui! 👋🏻
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12">
+          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-400 max-w-2xl mx-auto mb-12">
           Soy Lilieth Chacon! <br />
 PERMÍTANME PRESENTARME. <br />
 
@@ -66,7 +64,7 @@ Como desarrolladora Full Stack, me dedico a crear soluciones web y móviles inno
               href="https://www.linkedin.com/in/lilieth-chacón/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-purple-500 transition-colors"
+              className="text-gray-700 dark:text-gray-400 hover:text-purple-500 transition-colors"
             >
               <Linkedin className="h-6 w-6" />
             </a>
@@ -74,13 +72,13 @@ Como desarrolladora Full Stack, me dedico a crear soluciones web y móviles inno
               href="https://github.com/lilieth10"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-purple-500 transition-colors"
+              className="text-gray-700 dark:text-gray-400 hover:text-purple-500 transition-colors"
             >
               <Github className="h-6 w-6" />
             </a>
             <a
               href="mailto:liliethramirez91@gmail.com"
-              className="text-gray-400 hover:text-purple-500 transition-colors"
+              className="text-gray-700 dark:text-gray-400 hover:text-purple-500 transition-colors"
             >
               <Mail className="h-6 w-6" />
             </a>

@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/Navbar";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -35,16 +36,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={`${inter.className} min-h-screen bg-background text-foreground antialiased`}>
+      <body className={`${inter.className} min-h-screen bg-background text-foreground antialiased transition-colors duration-300`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
-          disableTransitionOnChange
         >
+          <ParticlesBackground />
           <div className="relative flex min-h-screen flex-col">
             <Navbar />
-            <main className="flex-1">
+            <main className="flex-1 pt-16">
               {children}
             </main>
           </div>

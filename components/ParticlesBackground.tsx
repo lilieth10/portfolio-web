@@ -4,8 +4,10 @@ import { useCallback } from "react";
 import { loadFull } from "tsparticles";
 import Particles from "react-tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
+import { useTheme } from "next-themes";
 
 export default function ParticlesBackground() {
+  const { theme } = useTheme();
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);
@@ -18,7 +20,7 @@ export default function ParticlesBackground() {
       options={{
         background: {
           color: {
-            value: "#0d1117",
+            value: "transparent",
           },
         },
         fpsLimit: 120,
@@ -46,13 +48,13 @@ export default function ParticlesBackground() {
         },
         particles: {
           color: {
-            value: "#ffffff",
+            value: theme === "dark" ? "#ffffff" : "#64748b",
           },
           links: {
-            color: "#ffffff",
+            color: theme === "dark" ? "#ffffff" : "#64748b",
             distance: 150,
             enable: true,
-            opacity: 0.2,
+            opacity: 0.8,
             width: 1,
           },
           move: {
@@ -70,10 +72,10 @@ export default function ParticlesBackground() {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 100,
           },
           opacity: {
-            value: 0.2,
+            value: 0.8,
           },
           shape: {
             type: "circle",
